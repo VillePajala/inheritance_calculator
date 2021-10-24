@@ -1,11 +1,11 @@
-defmodule InheritanceCalculatorWeb.Router do
-  use InheritanceCalculatorWeb, :router
+defmodule InheritanceWeb.Router do
+  use InheritanceWeb, :router
 
   pipeline :browser do
     plug :accepts, ["html"]
     plug :fetch_session
     plug :fetch_live_flash
-    plug :put_root_layout, {InheritanceCalculatorWeb.LayoutView, :root}
+    plug :put_root_layout, {InheritanceWeb.LayoutView, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
   end
@@ -14,14 +14,15 @@ defmodule InheritanceCalculatorWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", InheritanceCalculatorWeb do
+  scope "/", InheritanceWeb do
     pipe_through :browser
 
     get "/", PageController, :index
+    get "/inheritance", InheritanceController, :index
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", InheritanceCalculatorWeb do
+  # scope "/api", InheritanceWeb do
   #   pipe_through :api
   # end
 
@@ -37,7 +38,7 @@ defmodule InheritanceCalculatorWeb.Router do
 
     scope "/" do
       pipe_through :browser
-      live_dashboard "/dashboard", metrics: InheritanceCalculatorWeb.Telemetry
+      live_dashboard "/dashboard", metrics: InheritanceWeb.Telemetry
     end
   end
 

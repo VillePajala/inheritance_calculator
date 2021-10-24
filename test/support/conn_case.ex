@@ -1,4 +1,4 @@
-defmodule InheritanceCalculatorWeb.ConnCase do
+defmodule InheritanceWeb.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -11,7 +11,7 @@ defmodule InheritanceCalculatorWeb.ConnCase do
   we enable the SQL sandbox, so changes done to the database
   are reverted at the end of every test. If you are using
   PostgreSQL, you can even run database tests asynchronously
-  by setting `use InheritanceCalculatorWeb.ConnCase, async: true`, although
+  by setting `use InheritanceWeb.ConnCase, async: true`, although
   this option is not recommended for other databases.
   """
 
@@ -22,12 +22,12 @@ defmodule InheritanceCalculatorWeb.ConnCase do
       # Import conveniences for testing with connections
       import Plug.Conn
       import Phoenix.ConnTest
-      import InheritanceCalculatorWeb.ConnCase
+      import InheritanceWeb.ConnCase
 
-      alias InheritanceCalculatorWeb.Router.Helpers, as: Routes
+      alias InheritanceWeb.Router.Helpers, as: Routes
 
       # The default endpoint for testing
-      @endpoint InheritanceCalculatorWeb.Endpoint
+      @endpoint InheritanceWeb.Endpoint
     end
   end
 

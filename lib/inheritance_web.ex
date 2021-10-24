@@ -1,12 +1,12 @@
-defmodule InheritanceCalculatorWeb do
+defmodule InheritanceWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, views, channels and so on.
 
   This can be used in your application as:
 
-      use InheritanceCalculatorWeb, :controller
-      use InheritanceCalculatorWeb, :view
+      use InheritanceWeb, :controller
+      use InheritanceWeb, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -19,19 +19,19 @@ defmodule InheritanceCalculatorWeb do
 
   def controller do
     quote do
-      use Phoenix.Controller, namespace: InheritanceCalculatorWeb
+      use Phoenix.Controller, namespace: InheritanceWeb
 
       import Plug.Conn
-      import InheritanceCalculatorWeb.Gettext
-      alias InheritanceCalculatorWeb.Router.Helpers, as: Routes
+      import InheritanceWeb.Gettext
+      alias InheritanceWeb.Router.Helpers, as: Routes
     end
   end
 
   def view do
     quote do
       use Phoenix.View,
-        root: "lib/inheritance_calculator_web/templates",
-        namespace: InheritanceCalculatorWeb
+        root: "lib/inheritance_web/templates",
+        namespace: InheritanceWeb
 
       # Import convenience functions from controllers
       import Phoenix.Controller,
@@ -45,7 +45,7 @@ defmodule InheritanceCalculatorWeb do
   def live_view do
     quote do
       use Phoenix.LiveView,
-        layout: {InheritanceCalculatorWeb.LayoutView, "live.html"}
+        layout: {InheritanceWeb.LayoutView, "live.html"}
 
       unquote(view_helpers())
     end
@@ -72,7 +72,7 @@ defmodule InheritanceCalculatorWeb do
   def channel do
     quote do
       use Phoenix.Channel
-      import InheritanceCalculatorWeb.Gettext
+      import InheritanceWeb.Gettext
     end
   end
 
@@ -87,9 +87,9 @@ defmodule InheritanceCalculatorWeb do
       # Import basic rendering functionality (render, render_layout, etc)
       import Phoenix.View
 
-      import InheritanceCalculatorWeb.ErrorHelpers
-      import InheritanceCalculatorWeb.Gettext
-      alias InheritanceCalculatorWeb.Router.Helpers, as: Routes
+      import InheritanceWeb.ErrorHelpers
+      import InheritanceWeb.Gettext
+      alias InheritanceWeb.Router.Helpers, as: Routes
     end
   end
 

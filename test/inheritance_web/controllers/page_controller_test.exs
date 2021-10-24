@@ -1,5 +1,5 @@
-defmodule InheritanceCalculatorWeb.PageControllerTest do
-  use InheritanceCalculatorWeb.ConnCase
+defmodule InheritanceWeb.PageControllerTest do
+  use InheritanceWeb.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get(conn, "/")

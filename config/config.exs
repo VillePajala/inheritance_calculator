@@ -8,11 +8,11 @@
 import Config
 
 # Configures the endpoint
-config :inheritance_calculator, InheritanceCalculatorWeb.Endpoint,
+config :inheritance, InheritanceWeb.Endpoint,
   url: [host: "localhost"],
-  render_errors: [view: InheritanceCalculatorWeb.ErrorView, accepts: ~w(html json), layout: false],
-  pubsub_server: InheritanceCalculator.PubSub,
-  live_view: [signing_salt: "9XlFtAOZ"]
+  render_errors: [view: InheritanceWeb.ErrorView, accepts: ~w(html json), layout: false],
+  pubsub_server: Inheritance.PubSub,
+  live_view: [signing_salt: "xJ7+pxp0"]
 
 # Configures the mailer
 #
@@ -21,7 +21,7 @@ config :inheritance_calculator, InheritanceCalculatorWeb.Endpoint,
 #
 # For production it's recommended to configure a different adapter
 # at the `config/runtime.exs`.
-config :inheritance_calculator, InheritanceCalculator.Mailer, adapter: Swoosh.Adapters.Local
+config :inheritance, Inheritance.Mailer, adapter: Swoosh.Adapters.Local
 
 # Swoosh API client is needed for adapters other than SMTP.
 config :swoosh, :api_client, false

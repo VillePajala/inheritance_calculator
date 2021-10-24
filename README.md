@@ -1,4 +1,4 @@
-# InheritanceCalculator
+# Inheritance
 
 To start your Phoenix server:
 

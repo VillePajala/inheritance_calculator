@@ -1,9 +1,9 @@
-defmodule InheritanceCalculator.MixProject do
+defmodule Inheritance.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :inheritance_calculator,
+      app: :inheritance,
       version: "0.1.0",
       elixir: "~> 1.12",
       elixirc_paths: elixirc_paths(Mix.env()),
@@ -19,7 +19,7 @@ defmodule InheritanceCalculator.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {InheritanceCalculator.Application, []},
+      mod: {Inheritance.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end

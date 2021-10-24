@@ -1,5 +1,5 @@
-defmodule InheritanceCalculatorWeb.LayoutView do
-  use InheritanceCalculatorWeb, :view
+defmodule InheritanceWeb.LayoutView do
+  use InheritanceWeb, :view
 
   # Phoenix LiveDashboard is available only in development by default,
   # so we instruct Elixir to not warn if the dashboard route is missing.

@@ -2,13 +2,13 @@ import Config
 
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
-config :inheritance_calculator, InheritanceCalculatorWeb.Endpoint,
+config :inheritance, InheritanceWeb.Endpoint,
   http: [ip: {127, 0, 0, 1}, port: 4002],
-  secret_key_base: "V65+zR5aCzj4sF2/EWvMZfGk+9epAl0bcgDpe6LTIpYwo8rAodA8Ligl8GJODMvR",
+  secret_key_base: "s+l/AFfQXWEO3Zq7+6RZUUqJuETlVkFxElTe50LVywlBFy9iXGdoCJSQUfAJZOsy",
   server: false
 
 # In test we don't send emails.
-config :inheritance_calculator, InheritanceCalculator.Mailer,
+config :inheritance, Inheritance.Mailer,
   adapter: Swoosh.Adapters.Test
 
 # Print only warnings and errors during test

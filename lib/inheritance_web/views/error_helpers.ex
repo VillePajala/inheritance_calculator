@@ -1,4 +1,4 @@
-defmodule InheritanceCalculatorWeb.ErrorHelpers do
+defmodule InheritanceWeb.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """
@@ -39,9 +39,9 @@ defmodule InheritanceCalculatorWeb.ErrorHelpers do
     # should be written to the errors.po file. The :count option is
     # set by Ecto and indicates we should also apply plural rules.
     if count = opts[:count] do
-      Gettext.dngettext(InheritanceCalculatorWeb.Gettext, "errors", msg, msg, count, opts)
+      Gettext.dngettext(InheritanceWeb.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.dgettext(InheritanceCalculatorWeb.Gettext, "errors", msg, opts)
+      Gettext.dgettext(InheritanceWeb.Gettext, "errors", msg, opts)
     end
   end
 end

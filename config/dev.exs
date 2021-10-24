@@ -6,14 +6,14 @@ import Config
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with esbuild to bundle .js and .css sources.
-config :inheritance_calculator, InheritanceCalculatorWeb.Endpoint,
+config :inheritance, InheritanceWeb.Endpoint,
   # Binding to loopback ipv4 address prevents access from other machines.
   # Change to `ip: {0, 0, 0, 0}` to allow access from other machines.
   http: [ip: {127, 0, 0, 1}, port: 4000],
   check_origin: false,
   code_reloader: true,
   debug_errors: true,
-  secret_key_base: "r4UsKLn1u7hcX1XKrRn9sul8LefUR0EP653M9weaKigGqfGwK+5l3i0I9N7ZdXB8",
+  secret_key_base: "sOnFKPfq3TQ6/RYAKwnEaUpDDEpkC43HglynwI3GUhT4sTOEek7nfmb15q24kQzm",
   watchers: [
     # Start the esbuild watcher by calling Esbuild.install_and_run(:default, args)
     esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}
@@ -44,13 +44,13 @@ config :inheritance_calculator, InheritanceCalculatorWeb.Endpoint,
 # different ports.
 
 # Watch static and templates for browser reloading.
-config :inheritance_calculator, InheritanceCalculatorWeb.Endpoint,
+config :inheritance, InheritanceWeb.Endpoint,
   live_reload: [
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
-      ~r"lib/inheritance_calculator_web/(live|views)/.*(ex)$",
-      ~r"lib/inheritance_calculator_web/templates/.*(eex)$"
+      ~r"lib/inheritance_web/(live|views)/.*(ex)$",
+      ~r"lib/inheritance_web/templates/.*(eex)$"
     ]
   ]
 

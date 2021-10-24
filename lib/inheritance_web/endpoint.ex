@@ -1,13 +1,13 @@
-defmodule InheritanceCalculatorWeb.Endpoint do
-  use Phoenix.Endpoint, otp_app: :inheritance_calculator
+defmodule InheritanceWeb.Endpoint do
+  use Phoenix.Endpoint, otp_app: :inheritance
 
   # The session will be stored in the cookie and signed,
   # this means its contents can be read but not tampered with.
   # Set :encryption_salt if you would also like to encrypt it.
   @session_options [
     store: :cookie,
-    key: "_inheritance_calculator_key",
-    signing_salt: "c6tHekQ8"
+    key: "_inheritance_key",
+    signing_salt: "GL2Umb5L"
   ]
 
   socket "/live", Phoenix.LiveView.Socket, websocket: [connect_info: [session: @session_options]]
@@ -18,7 +18,7 @@ defmodule InheritanceCalculatorWeb.Endpoint do
   # when deploying your static files in production.
   plug Plug.Static,
     at: "/",
-    from: :inheritance_calculator,
+    from: :inheritance,
     gzip: false,
     only: ~w(assets fonts images favicon.ico robots.txt)
 
@@ -45,5 +45,5 @@ defmodule InheritanceCalculatorWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
-  plug InheritanceCalculatorWeb.Router
+  plug InheritanceWeb.Router
 end

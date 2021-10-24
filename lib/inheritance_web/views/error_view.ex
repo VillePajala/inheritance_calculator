@@ -1,5 +1,5 @@
-defmodule InheritanceCalculatorWeb.ErrorView do
-  use InheritanceCalculatorWeb, :view
+defmodule InheritanceWeb.ErrorView do
+  use InheritanceWeb, :view
 
   # If you want to customize a particular status code
   # for a certain format, you may uncomment below.
