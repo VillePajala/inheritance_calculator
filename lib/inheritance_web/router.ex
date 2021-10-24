@@ -19,6 +19,7 @@ defmodule InheritanceWeb.Router do
 
     get "/", PageController, :index
     get "/inheritance", InheritanceController, :index
+    get "/inheritance/:messenger", InheritanceController, :show
   end
 
   # Other scopes may use custom stacks.
