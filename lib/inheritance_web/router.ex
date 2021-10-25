@@ -8,6 +8,7 @@ defmodule InheritanceWeb.Router do
     plug :put_root_layout, {InheritanceWeb.LayoutView, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
+    plug InheritanceWeb.Plugs.Locale, "en"
   end
 
   pipeline :api do
