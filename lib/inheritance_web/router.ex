@@ -18,9 +18,10 @@ defmodule InheritanceWeb.Router do
   scope "/", InheritanceWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
+    get "/", InheritanceController, :index
     get "/inheritance", InheritanceController, :index
     get "/inheritance/:messenger", InheritanceController, :show
+    resources "/users", UserController
   end
 
   # Other scopes may use custom stacks.
