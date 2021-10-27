@@ -6,14 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <%= csrf_meta_tag() %>
     <title>Inheritance</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link phx-track-static rel="stylesheet" href={Routes.static_path(@conn, "/assets/app.css")}/>
     <script defer phx-track-static type="text/javascript" src={Routes.static_path(@conn, "/assets/app.js")}></script>
   </head>
   <body>
     <header>
-      <div class="headerContainer">
-        <h1>PERINTÖLASKURI</h1>
-      </div>
+      <nav>
+        <div class="nav-wrapper">
+          <div class="brand-logo center">PERINTÖLASKURI</div>
+        </div>
+      </nav>
     </header>
     <%= @inner_content %>
   </body>
